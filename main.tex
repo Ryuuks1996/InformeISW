@@ -1,0 +1,118 @@
+\documentclass[12pt]{article}
+%\usepackage[english]{babel}
+\RequirePackage[spanish]{babel}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+%\usepackage[pdftex,bookmarks,colorlinks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+%\usepackage[spanish]{babel}
+\usepackage[pdftex,bookmarks,breaklinks]{hyperref}  % PDF hyperlinks, with coloured links
+%\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{epstopdf}
+\usepackage{fullpage}
+\usepackage{url}
+\usepackage{colortbl}
+\usepackage{lscape}
+\usepackage{float}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{multirow}
+\parskip 3ex % espacio entre parrafos.
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+	{-2.5ex\@plus -1ex \@minus -.25ex}%
+	{1.25ex \@plus .25ex}%
+	{\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+
+\begin{document}
+%%%%%%%%%%%%%%% PORTADA %%%%%%%%%%%%%%%%%%
+\pagestyle{empty}
+\begin{figure}
+   \centering
+   \includegraphics[scale=.5]{imgs/logo_utal.png}
+\end{figure}
+
+\begin{center}
+Facultad de Ingeniería\\
+Escuela de Ingeniería en Bioinformática\\
+Ingeniería de Software\\
+\bigskip\bigskip\bigskip\bigskip
+
+\rule{14cm}{0.5mm}
+
+\begin{Huge}\textbf{Título de informe}\end{Huge}
+
+\rule{14cm}{0.5mm}
+
+\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip
+\bigskip\bigskip\bigskip\bigskip
+%\bigskip\bigskip\bigskip\bigskip
+%\bigskip\bigskip\bigskip\bigskip
+
+\begin{tabular*}{14cm}{l@{\extracolsep{\fill}}r}
+\textbf{\emph{Integrantes:}} & \textbf{\emph{Profesor:}}\\
+Nombre Integrante1 & Nombre Profesor\\
+Nombre Integrante2 & \textbf{\emph{Ayudante:}}\\
+Nombre Integrante3 & Nombre Ayudante\\
+\end{tabular*}
+\end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{plain}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoffigures 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\listoftables
+
+
+%%%%%%% INTRODUCCIÓN %%%%%%%%%%%%%%%%
+\newpage
+\input{cap/Introduccion.tex}
+
+%%%%%%% PLANIFICACIÓN DE TRABAJO %%%%%%%%%%%%
+\newpage
+\input{cap/Planificacion_del_trabajo.tex}
+
+%%%%%%%%%% ANALISIS %%%%%%%%%%%%%%
+\newpage
+\input{cap/Analisis.tex}
+
+%%%%%%%%% VALIDACION %%%%%%%%%%%
+\newpage
+\input{cap/Validacion.tex}
+
+%%%%%%%%%%% DISEÑO %%%%%%%%%%%%%
+%%%% Latex no permite el uso de 3 subsection por lo que \paragraph fue modificado para que cumpla con las caracteristicas de una subsection
+
+\newpage
+\section{Diseño}
+
+\subsection{Derivación del Modelo de Software}
+\subsubsection{Modelo de software inicial}
+\subsubsection{Diagramas de Clases}
+\subsubsection{Diagramas de Interacción}
+\subsubsection{Diagramas de Estados}
+
+\subsection{Refinamientos}
+\subsubsection{Lugar de Refinamiento}
+\subsubsection{Para cada Lugar}
+\paragraph{Refinamientos considerados}
+\paragraph{Selección y descripción de una opción}
+
+%%%%%%%%%%%%%% IMPLEMENTACION %%%%%%%%%%
+\newpage
+\input{cap/Implementacion.tex}
+
+%%%%%%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%%5
+\newpage
+\input{cap/Anexos.tex}
+\end{document}
