@@ -2,89 +2,146 @@
 
 \subsection{Contexto}
 \subsubsection{Descripción General}
-Como todo proyecto el paso inicial es un análisis del objetivo a realizar, y este caso no es la excepción. La información utilizada para este análisis consistió en una explicación concisa de los requerimientos necesarios de la aplicación, principalmente mecánicas y características que debe contener la versión final, la cual concluyó que su desarrollo debe tener un énfasis en el funcionamiento básico de esta.\\
-El resultado del análisis llevó a una descripción propia del proyecto, el resultado final es una aplicación que funcione como herramienta interactiva basada en una enseñanza de exploración y el contenido que esta acción entrega. La parte lúdica del aprendizaje se ve con la implementación de un sistema inspirado en juegos de mesa donde un numero plural de usuarios toman turnos para realizar acciones y avanzar en un mapa para llegar a una meta final. Cada turno se les entrega a los jugadores una imagen en 360 grados de un área o paisaje en particular y una cantidad de conceptos escogidos al azar (estas palabras son encontradas en una base de datos) con esto los usuarios tendrán que concebir una historia usando los datos mencionados. Al final todos tendrán que votar por otro usuario que consideren haber creado la mejor historia, el usuario ganador avanza un espacio y se sigue la misma idea cada turno hasta que uno llegue al final.
+Como todo proyecto el paso inicial es un análisis del objetivo a realizar, y este caso no es la excepción. La información utilizada para este análisis consiste en una explicación concisa de los requerimientos necesarios de la aplicación, principalmente mecánicas y características que debe contener la versión final.\\
+El resultado del análisis llevó a una descripción propia del proyecto, el resultado final es una aplicación que funcione como herramienta interactiva basada en una enseñanza de exploración y el contenido que esta acción entrega. La parte lúdica del aprendizaje se ve con la implementación de un sistema inspirado en juegos de mesa donde un numero plural de usuarios toman turnos para realizar acciones y avanzar en un mapa para llegar a una meta final. Cada turno se les entrega a los jugadores una imagen en 360 grados de un área o paisaje en particular y una cantidad de conceptos escogidos al azar (estas palabras son encontradas en una base de datos) con esto los usuarios tendrán que concebir una historia usando los datos mencionados. Al final todos tendrán que votar por otro usuario que consideren haber creado la mejor historia, el usuario ganador avanza un espacio y se sigue la misma idea cada turno hasta que uno llegue al final.\\
 En cuanto a los problemas mencionados en el punto 1.1.2 se tomó la esquematización de estos y se analizaron con profundidad. La base de datos a utilizar debe centrarse en una cantidad reducida de usuarios (cuantos jugadores simultáneos se encuentran), también se llegó a la conclusión de que cada usuario cuenta con su propio dispositivo (un smartphone) por lo que se requerirá uso de internet para facilitar los datos a los usuarios. El análisis del proyecto y de la situación del equipo de desarrollo encuentra que el uso de Android studio (con el lenguaje de kotlin) y la implementación de firebase a este es la opción mas viable.\\
-El diseño de la aplicación lleva a la conclusión de comenzar la estructura principal de este (encontrado en el caso de estudio entregado al equipo) dándole una mayór importancia la implementación las mecánicas claves recibidas, asegurándose de que estas funcionen sin problemas antes de ampliar o expandir el desarrollo del proyecto.
+El diseño de la aplicación lleva a la conclusión de comenzar la estructura principal de este (encontrado en el caso de estudio entregado al equipo) dándole una mayór importancia la implementación las mecánicas claves recibidas, asegurándose de que estas funcionen sin problemas antes de ampliar o expandir el desarrollo del proyecto.\\
 Lo que respecta a material audiovisual el equipo encarga en las ultimas fases de desarrollo un tiempo en particular para la búsqueda e implementación de sonidos o imágenes necesarias, y al igual que los otros casos, dándole mayor importancia a las direcciones entregadas al equipo, en este caso siendo el uso de imágenes en 360 grados en la aplicación.
 
 \subsubsection{Descripción de Clientes y Usuarios:}
-Luego de un análisis realizado en base a la información entregada del resultado esperado por la aplicación se a encontrado un perfil definido para tanto clientes como usuarios.
-Los clientes son parte de el laboratorio mauletec y fueron concretados como un grupo centrado en una de las mecánicas principales presentadas. En específico, la vista de paisajes y lugares geográficos en 360 grados le interesa a un grupo enfocado en turismo como forma de enseñar los paisajes de una zona o región en particular. El otro enfoque encontrado en la aplicación que puede llamar la atención para un cliente es la mecánica de crear historias en base a palabras encontradas en una base de datos, tomando con mayor atención la parte literaria de juego centrada en la creatividad del usuario, pero siendo usada como forma de enseñanza.\\
-Por otro lado, durante el desarrollo de la aplicación los usuarios tomaron un enfoque más genérico que el de los clientes, se encontró que en cualquier caso estos tenían requerimientos  simples ya que lo más importante es facilitarles el uso de esta. El usuario objetivo se identificó como un individuo o individua con un conocimiento basico de tecnologia, tomando en cuenta de que la plataforma utilizada es de smartphones. Ademas se contar con un dispositivo que cuente con un sistema operativo que permita instalar y usar la aplicación, se requiere que el usuario entienda el concepto de identificarse de forma virtual con su correo electronico ademas de entender las reglas básicas del juego. Además, este debe tener un conocimiento literario de enseñanza básica como mínimo, tomando en cuenta de que la interacción principal de parte del usuario es crear y contar una historia en base a un grupo de palabras entregadas.
+Luego de un análisis realizado en base a la información entregada del resultado esperado por la aplicación se a encontrado un perfil definido para tanto clientes como usuarios.\\
+Los clientes son parte del laboratorio mauletec y fueron concretados como un grupo centrado en el turismo, una de las principales mecánicas presentadas. En específico, la vista de paisajes y lugares geográficos en 360 grados le interesa a un grupo enfocado en turismo; como forma de enseñar los paisajes de una zona o región en particular. El otro enfoque encontrado en la aplicación que puede llamar la atención para un cliente es la mecánica de crear historias en base a palabras encontradas en una base de datos, tomando con mayor atención la parte literaria de juego centrada en la creatividad del usuario, pero siendo usada como forma de enseñanza. Para resumir, la motivacion principal de nuestro cliente con este proyecto es dar a cnocer la cultura de la region del maule de manera lúdica y entretenida al publico general.\\
+Por otro lado, durante el desarrollo del software los usuarios tomaron un enfoque más genérico que el de los clientes, se encontró que en cualquier caso estos tenían requerimientos  simples ya que lo más importante para ellos es que la aplicación sea de uso sencillo. El usuario objetivo se identificó como un individuo o individua con un conocimiento básico de tecnología, tomando en cuenta de que la plataforma utilizada es de smartphones. Ademas de contar con un dispositivo que posea un sistema operativo que permita instalar y usar la aplicación, se requiere que el usuario entienda el concepto de identificarse de forma virtual con su correo electronico ademas de entender las reglas básicas del juego. Además, este debe tener un conocimiento literario de enseñanza básica como mínimo, tomando en cuenta de que la interacción principal de parte del usuario es crear y contar una historia en base a un grupo de palabras entregadas, En definitiva, nuestro usuario es cualquier persona natural can lal capacidades necesarias para utilizar la tecnologia basica y con capacidades de comprencion y habla al nivel de un niño en enseñanza basica.
+\newpage
 \subsection{Especificación de Requerimientos}
 \subsubsection{Funciones del Sistema}
-Funciones evidentes:
-\\	-Registrar nuevo usuario.
-\\	-Realizar autentificacion con correo.
-\\	-Realizar autentificacion con contraseña.
-\\	-Realizar autentificacion con Gmail.
-\\	-Mostrar imagenes en 360°.
-\\	-Sistema de turnos.
-\\	-Generar lista de palabras.
-\\	-Multijugador global.
 
+Tablas de funciones evidentes del sistema
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{| m{2.3cm} | m{5cm} | m{8cm} |}        
+        	\hline 
+        	Identificador & Nombre & Descripción\\
+        	\hline
+        	F.1.01 & Registrar nuevo usuario & Permitir al usuario ingresar con una cuanta nueva\\
+        	\hline
+        	F.1.02 & Realizar autentificacion con correo & Autorizar el ingreso del ususario por medio de reconocimiento con cuenta de correo\\
+        	\hline
+        	F.1.03 & Realizar autentificacion con contraseña & Autorizar el ingreso del ususario por medio de reconocimiento con contraseña\\
+        	\hline
+        	F.1.04 & Realizar autentificacion con Gmail & Autorizar el ingreso del ususario por medio de reconocimiento con cuenta de gmail\\
+        	\hline
+        	F.1.05 & Mostrar imagenes en 360° & Principal caracteristica del sistema que permite mostrar por pantalla una imagen es 360°\\
+        	\hline
+        	F.1.06 & Sistema de turnos & Mecánica principal del juego para que todos los usuarios participen\\
+        	\hline
+        	F.1.07 & Generar lista de palabras & Se genera una lista de palabras sacadas de la base de datos\\
+        	\hline
+        	F.1.08 & Mostrar lista de palabras & Le muestra al usuario la lista de palabras generadas para darle sentido al juego\\
+        	\hline
+        	F.1.09 & Multijugador global & Función del sistema que permite a varios usuarios jugar una misma partida\\
+        	\hline
+        \end{tabular}
+    \caption{Funciones evidentes}
+    \end{center}
+\end{table}
 
-Funciones ocultas:
-\\	-Cargar imagenes en 360°.
-\\	-Crear base de datos para palabras.
-\\	-Crear base de datos para puntajes.
+Tablas de funciones ocultas del sistema
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{| m{2.3cm} | m{5cm} | m{8cm} |}        
+        	\hline 
+        	Identificador & Nombre & Descripción\\
+        	\hline
+        	F.2.01 & Cargar imagenes en 360° & Sube las imagenes para ser usadas luego por la aplicación\\
+        	\hline
+        	F.2.02 & Crear base de datos para palabras & Se crea y guarda una lista de palabras previamente analizadas para ser usadas en el juego\\
+        	\hline
+        	F.2.03 & Crear base de datos para puntajes & Se almacenan los puntajes en la base de datos para ser analizados luego\\
+        	\hline
+        \end{tabular}
+    \caption{Funciones ocultas}
+    \end{center}
+\end{table}
 
-
-Funciones Supérfluas:
-\\	-Generar una tabla de puntajes.
+Tablas de funciones supérfluas del sistema
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{| m{2.3cm} | m{5cm} | m{8cm} |}        
+        	\hline 
+        	Identificador & Nombre & Descripción\\
+        	\hline
+        	F.3.01 & Generar una tabla de puntajes & Se muestran al jugador los puntajes ordenados de manera ascendente\\
+        	\hline
+        \end{tabular}
+    \caption{Funciones supérfluas}
+    \end{center}
+\end{table}
+\newpage
 \subsubsection{Atributos del Sistema}
--Intuitiva: Debe ser de facil entendimiento para el usuario final, es decir, el ususario debe saber que hacer o como empezar a jugar sin mucha complejidad.
+Los atributos del sistema son las cualidades con las que cuenta un software, y responden a las caracteristicas con 5 factores de calidad  que son: Funcionalidad, usabilidad, confiabilidad, prestación y soporte; mas comunmente llamado como "modelo FURPS+" por sus iniciales en inglés.\\
+Las cualidades ya mencionadas cubren los factores de calidad y los atributos, restricciones de diseño y requerimientos de implementación, físicos y de interfaz. El unico contratiempo de este modelo, es que no abarca la portabilidad de los productos software que se consideran, esto es una limitacion debido a que no se tienen en cuenta las exigencia del dispositivo.
 
+Tabla de atributos del sistema
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{| m{2.3cm} | m{3.5cm} | m{10cm} |}        
+        	\hline 
+        	Identificador & Nombre & Descripción\\
+        	\hline
+        	A.01 & Intuitiva & De fácil entendimiento. El usuario final debe saber que hacer o como empezar a jugar sin mucha complejidad\\
+        	\hline
+        	A.02 & Optimizado & La aplicación debe usar recursos del celular solo de ser sumamente necesario\\
+        	\hline
+        	A.03 & Baja frecuencia de fallos & El Programa no debe presentar mas de cuatro fallos al mes\\
+        	\hline
+        	A.04 & Facilidad de configuración & El usuario debe poder tener la aplicación como a el más le acomode y anexada a su email personal de preferencia\\
+        	\hline
+        	A.05 & Facilidad de mantenimiento & A los programadores y gente encargada de mantener la aplicación funcionando se les debe hacer sencillo ingresar al codigo, entenderlo y aplicar las reparaciones\\
+        	\hline
+        \end{tabular}
+    \caption{Atributos del sistema}
+    \end{center}
+\end{table}
 
--Optimizado: La aplicación debe usar recursos del celular solo de ser sumamente necesario.
-
-
--Baja frecuencia de fallos: El Programa no debe presentar mas de cuatro fallos al mes.
-
-
--Facilidad de configuración: Debe ser sencillo para el usuario customizar a su gusto la aplicacion.
-
-
--Facilidad de mantenimiento: A los programadores y gente encargada de mantener la aplicacion dfuncionando se les debe hacer sencillo ingresar al codigo, entenderlo y aplicar las reparaciones
 \subsubsection{Atributos por Función}
 \begin{table}[H]
     \begin{center}
         \begin{tabular}{| l | m{6cm} | m{6cm} |}        
         	\hline 
-        	Ref\# & Función & Atributo\\
+        	Ref\# & Función & Atributo asociado\\
         	\hline
-        	R1.1 & Registrar nuevo usuario & Facilidad de configuración\\
+        	R1.1 & F.1.01 & Facilidad de configuración\\
         	\hline
-        	R1.2 & Realizar autentificacion con correo, contraseña o gmail & Facilidad de configuración\\
+        	R1.2 & F.1.02, F.1.03, F.1.04 & Facilidad de configuración\\
         	\hline
-        	R1.3 & Mostrar imagenes en 360° & Intuitiva\\
+        	R1.3 & F.1.05 & Intuitiva\\
         	\hline
-        	R1.4 & Sistema de turnos & Intuitiva\\
+        	R1.4 & F.1.06 & Intuitiva\\
         	\hline
-        	R1.5 & Generar lista de palabras & Intuitiva\\
+        	R1.5 & F.1.07, F.1.08 & Intuitiva\\
         	\hline
-        	R1.6 & Multijugador global & Facilidad de configuracion\\
+        	R1.6 & F.1.09 & Facilidad de configuración\\
         	\hline
-        	R1.7 & Cargar imagenes 360° & Facilidad de configuración\\
+        	R1.7 & F.2.01 & Facilidad de configuración\\
         	\hline
-        	R1.8 & Crear base de datos para palabras y puntaje & Facilidad de mantenimiento\\
+        	R1.8 & F.2.02, F.2.03 & Facilidad de mantenimiento\\
         	\hline
         \end{tabular}
-    \caption{Funciones agrupadas}
+    \caption{Atributos por función}
     \end{center}
 \end{table}
 \newpage
 \subsection{Actores}
-Jugador : La aplicación está hecha para que sea utilizada por usuarios, su último fin es entretener a un público y es quien debiera ser su actor final y principal.
+\begin{enumerate}[1.]
+	\item Jugador : El fin último de la aplicación en entretener al público, por lo que todos los jugadores, es decir, aquellos que frecuenten la aplicación, deben ser siempre nuestro punto de ancla a la hora de generar ideas para nuestro software.
+	\item Google FireBase: Google FireBase es uno de los actores que permite la comunicación entre distintas herramientas, y así facilitar la funcionalidad del software. Algunas de las herramientas que utilizamos a través de FireBase son:
+	\begin{enumerate}[a)]
+		\item Base de Datos : La aplicación debe mantener contacto con la base de datos de forma directa, para poder acceder a las palabras, imágenes, usuarios, etc.
+		\item Gmail : Herramienta principal para identificar al usuario por medio de correo electrónico .
+	\end{enumerate} 
+\end{enumerate}
 
-2. Autores : Son quienes se encargan de dar mantencion y programar la aplicacion para su correcto funcionamiento.
-
-3. FireBase : Permite el contacto entre la aplicación y múltiples herramientas como lo son la base de datos, el guardado de respaldo, etc. Además hace nexo entre la aplicación y los siguientes actores:
-
-a. -Base de Datos : La aplicación debe mantener contacto con la base de datos de forma directa, para poder acceder a las palabras, imágenes, usuarios, etc.
-
-b. -Gmail : Herramienta principal para identificar al usuario por medio de correo electrónico.
 \subsection{Casos de Uso}
 \subsubsection{Caso de Uso Esencial}
 \begin{table}[H]
@@ -93,7 +150,7 @@ b. -Gmail : Herramienta principal para identificar al usuario por medio de corre
         	\hline 
         	Identificador & 1\\
         	\hline
-        	Caso de Uso & Jugar una partida de Conquista Turística
+        	Caso de Uso & Jugar un turno de Conquista Turística
 360°\\
         	\hline
         	Actores & Jugador\\
@@ -102,7 +159,7 @@ b. -Gmail : Herramienta principal para identificar al usuario por medio de corre
         	\hline
         	Tipo & Primario y escencial\\
         	\hline
-        	Descripción & El programa le muestra al jugador 4 palabras por pantalla, el jugador las ve y las usa para crear una historia. Los demás jugadores votan por la creatividad de la historia en la applicacion y deciden que el jugador puede avanzar, el programa recibe el feedback de los jugadores por pantalla y mueve al jugador a la siguiente posición.\\
+        	Descripción & El jugador recibe por pantalla palabras que debe usar para crear una historia. El sistema recibe el feedback de los demas jugador y según lo que puntue este avanza o no.\\
         	\hline
         	Referencias Cruzadas & R1.4 ,R1.5 ,R1.6\\
         	\hline
@@ -110,6 +167,27 @@ b. -Gmail : Herramienta principal para identificar al usuario por medio de corre
     \caption{Primer caso de uso}
     \end{center}
 \end{table}
+
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\begin{longtable}[H]{| m{8cm} | m{8cm} |}
+\hline 
+\textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
+\hline 
+1.-Este caso de uso comienza cuando el ususario inicia un turno de juego & 2.-La GUI le presenta al ususario un listado de palabras\\
+\hline
+3.-El usuario crea una historia usando las palabras presentadas & \\
+\hline
+4.-Los otros participantes califícan la historia & 5.-El sistema recibe las puntuaciones y procesa la información\\
+\hline
+& 6.-El jugador recibe una calificacion positiva y avanza al siguiente punto\\
+\hline
+\multicolumn{2}{| l |}{\textbf{Flujo alternativo}} \\
+\hline
+\multicolumn{2}{| m{16cm} |}{Línea 6.-El jugador recibe una calificacion negativa y se mantien en su pocisión hasta la siguiente ronda}\\
+\hline
+\caption{Descripción de procesos caso de uso N°1}
+\end{longtable}
 
 \begin{table}[H]
     \begin{center}
@@ -134,6 +212,25 @@ b. -Gmail : Herramienta principal para identificar al usuario por medio de corre
     \end{center}
 \end{table}
 
+\begin{longtable}[H]{| m{8cm} | m{8cm} |}
+\hline 
+\textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
+\hline 
+1.-Este caso de uso comienza cuando el usuario abre la aplicación & 2.-La GUI le presenta al ususario un formulario de usuario y contraseña para ser rellenado\\
+\hline
+3.-El usuario rellena los campos señalados & 4.-El sistema verifica la información a traves del firebase\\
+\hline
+& 5.-La aplicación recibe los datos del firebase y accede a la pantalla principal\\
+\hline
+\multicolumn{2}{| l |}{\textbf{Flujo alternativo}} \\
+\hline
+\multicolumn{2}{| m{16cm} |}{Línea 2.-Se identifica que el usuario ya habia ingresado con enterioridad y la aplicacion accede directamente a la pantalla principal}\\
+\hline
+\multicolumn{2}{| m{16cm} |}{Línea 5.-Se identifica que los datos ingresados son incorrectos y la aplicacion le envia feedback al usuario}\\
+\hline
+\caption{Descripción de procesos caso de uso N°2}
+\end{longtable}
+
 \begin{table}[H]
     \begin{center}
         \begin{tabular}{| l | m{12cm} |}        
@@ -156,6 +253,19 @@ b. -Gmail : Herramienta principal para identificar al usuario por medio de corre
     \caption{Tercer caso de uso}
     \end{center}
 \end{table}
+
+\begin{longtable}[H]{| m{8cm} | m{8cm} |}
+\hline 
+\textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
+\hline 
+1.-Este caso de uso comienza cuando el ususario inicia un turno de juego & 2.-El software accede a la base de datos a traves del firebase\\
+\hline
+& 3.-Se buscan y seleccionan palabras al azar\\
+\hline
+& 4.-Se le presenta esta lista al usuario\\
+\hline
+\caption{Descripción de procesos caso de uso N°3}
+\end{longtable}
 
 \begin{table}[H]
     \begin{center}
@@ -180,6 +290,15 @@ b. -Gmail : Herramienta principal para identificar al usuario por medio de corre
     \end{center}
 \end{table}
 
+\begin{longtable}[H]{| m{8cm} | m{8cm} |}
+\hline 
+\textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
+\hline 
+1.-Este caso de uso comienza cuando el jugador conquista una pocision y avanza a la siguiente & 2.-La GUI le presenta al ususario la nueva imagen 360°\\
+\hline 
+\caption{Descripción de procesos caso de uso N°4}
+\end{longtable}
+
 \begin{table}[H]
     \begin{center}
         \begin{tabular}{| l | m{12cm} |}        
@@ -203,28 +322,55 @@ b. -Gmail : Herramienta principal para identificar al usuario por medio de corre
     \end{center}
 \end{table}
 
+\begin{longtable}[H]{| m{8cm} | m{8cm} |}
+\hline 
+\textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
+\hline 
+1.-Este caso de uso comienza cuando el jugador accede a la tabla de puntajes & 2.-El sistema recibe la orden he ingresa a la base de datos\\
+\hline
+& 3.-El sistema adquiere los puntajes y los ordena de mayor a menor\\
+\hline
+& 4.-La GUI le muestra al usuario la tabla ordenada con los puntajes\\
+\hline
+\caption{Descripción de procesos caso de uso N°5}
+\end{longtable}
+
 \begin{table}[H]
     \begin{center}
         \begin{tabular}{| l | m{12cm} |}        
         	\hline 
         	Identificador & 6\\
         	\hline
-        	Caso de Uso & Cargar imagen 360°\\
+        	Caso de Uso & Puntuar Jugador\\
         	\hline
-        	Actores & Autores\\
+        	Actores & Jugador y Firebase\\
         	\hline
         	Propósito & Retroalimentar al jugador\\
         	\hline
-        	Tipo & Principal y escencial\\
+        	Tipo & Secundario y concreto\\
         	\hline
-        	Descripción & Los autores del programa Editan y ajustan la imagen para que quede de acorde a las especificaciones del sistema y luego la cargan a la aplicación\\
+        	Descripción & los usuarios califícan la historia del jugador de turno a traves de la GUI\\
         	\hline
-        	Referencias Cruzadas & R1.7\\
+        	Referencias Cruzadas & F.2.03, F.3.01\\
         	\hline
         \end{tabular}
     \caption{Sexto caso de uso}
     \end{center}
 \end{table}
+
+\begin{longtable}[H]{| m{8cm} | m{8cm} |}
+\hline 
+\textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
+\hline 
+1.-Este caso de uso comienza cuando el cuenta su historia & 2.-La GUI le muestra a los demás jugadores un sistema de calificación\\
+\hline
+3.-Los demas usuarios en la partida votan la historia narrada & 4.-El sistema almacena y analiza las votaciones\\
+\hline
+& 5.-La GUI devuelve el feedback al jugador de turno\\
+\hline
+\caption{Descripción de procesos caso de uso N°6}
+\end{longtable}
+
 \subsubsection{Diagrama de Caso de Uso}
 \begin{figure}[H]
    \includegraphics[scale=0.5]{imgs/DiagramaCasoUso1.png}

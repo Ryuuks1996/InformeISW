@@ -117,46 +117,65 @@ Los recursos que se utilizarán en el desarrollo del proyecto del software de co
 \end{table}
 
 \subsection{Estimación de esfuerzo}
-Se a realizado un analisis de todos los aspectos posibles que serán parte del desarrollo del software y que competen a la estimación de esfuerzo. Sin embargo, todo lo analizado queda sujeto a modificaciones, debido principalmente a que el proyecto está aún en desarrollo y no se encuentra una versión base o una visión profesionalmente detallada de las iteraciones para desarrollar el producto final. Tanto a nivel de programación como de diseño a de ser necesaria una frecuente revisión y actualización con cada iteración y avance en este proyecto.
+Se a realizado un análisis de todos los aspectos posibles que serán parte del desarrollo del software y que competen a la estimación de esfuerzo. Sin embargo, todo lo analizado queda sujeto a modificaciones, debido principalmente a que el proyecto está aún en desarrollo y no se encuentra una versión base o una visión profesionalmente detallada de las iteraciones para desarrollar el producto final. Tanto a nivel de programación como de diseño a de ser necesaria una frecuente revisión y actualización con cada iteración y avance en este proyecto.
 
 Según lo conversado, pactado y analizado con el equipo de desarrollo en la primera iteración, el análisis del proyecto se puede apreciar en las siguientes graficas de estimación de puntos de esfuerzo.
-\begin{figure}[htbp]
-	\includegraphics{imgs/1.JPG}
-	\includegraphics[scale=0.9]{imgs/2.JPG}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height=9cm]{imgs/1.JPG}
+	\caption{Precio de mese hombre}
 \end{figure}
 
-\begin{figure}[htbp]
-	\includegraphics{imgs/Grafica.png}
-	\includegraphics[scale=0.5]{imgs/Estimacion de PF.JPG}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1.7]{imgs/2.JPG}
+	\caption{Tabla Mes-hombre}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height=9cm]{imgs/Grafica.png}
+	\caption{Grafica Mes-hombre}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm, height=9cm]{imgs/Estimacion de PF.JPG}
+	\caption{Estimacion de puntos de esfuerzo}
 \end{figure}
 
 \subsection{Asignación de recursos}
+En esta parte va la carta gantt
+"Estamos arreglando esta parte"
+
 \begin{table}[H]
     \begin{center}
-        \begin{tabular}{| l | m{12cm} |}        
+        \begin{tabular}{| m{6cm} | m{3cm} | m{2cm} | m{4cm} |}        
         	\hline 
-        	Recurso & Asigando a \\
+        	Tarea & Categorìa & Prioridad & Asignado a\\
         	\hline
-        	Felipe Duran & Encargado de programación, FD\_Notebook\\
+        	Dependencias & Implementación & Medio & Alex Molina\\
         	\hline
-        	Alex Molina & Encargado de administración, AM\_Notebook\\
+        	Modelo de Implantación & Implementación & Medio & Ignacio Gajardo\\
         	\hline
-        	Ignacio Gajardo & Encargado de diseño, IG\_Notebook\\
+        	Codigo Fuente & Implementación & Medio & Felipe Duran\\
         	\hline
         \end{tabular}
     \caption{Asignacion del personal a sus distintos cargos}
     \end{center}
 \end{table}
 \subsection{Planificación temporal de actividades}
-
 \textbf{Gráficos de la planificación actual:}
 
-\begin{figure}[htbp]
-	\includegraphics[scale=0.7]{imgs/planner_status.png}
-	\includegraphics[scale=0.7]{imgs/planner_bucket.png}
-\end{figure}
-
-\begin{figure}[htbp]
-	\includegraphics[scale=0.7]{imgs/planner_priority.png}
-	\includegraphics[scale=0.7]{imgs/planner_members.png}
+\begin{figure}[H]
+ \centering
+  \subfloat[prioridad]{
+   \label{f:gato}
+    \includegraphics[width=7cm, height=8cm]{imgs/planner_priority.png}}
+  \subfloat[Gráfico de barra]{
+   \label{f:tigre}
+    \includegraphics[width=7cm, height=8cm]{imgs/planner_bucket.png}}
+ \caption{Estado de la planificación}
+ \label{f:Graficos}
 \end{figure}
