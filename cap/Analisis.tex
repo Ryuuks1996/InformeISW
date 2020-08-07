@@ -138,11 +138,12 @@ Tabla de atributos del sistema
 	\item Google FireBase: Google FireBase es uno de los actores que permite la comunicación entre distintas herramientas, y así facilitar la funcionalidad del software. Algunas de las herramientas que utilizamos a través de FireBase son:
 	\begin{enumerate}[a)]
 		\item Base de Datos : La aplicación debe mantener contacto con la base de datos de forma directa, para poder acceder a las palabras, imágenes, usuarios, etc.
-		\item Gmail : Herramienta principal para identificar al usuario por medio de correo electrónico .
+		\item Gmail : Herramienta principal para identificar al usuario por medio de correo electrónico.
 	\end{enumerate} 
 \end{enumerate}
-
+\newpage
 \subsection{Casos de Uso}
+En las siguienetes subsecsiones identificaremos y analizaremos algunos de los casos de uso detectadosy como estos tienen relacion con los autore, requisitos, y funciones del sistema vistos con anterioridad en este informe.
 \subsubsection{Caso de Uso Esencial}
 \begin{table}[H]
     \begin{center}
@@ -159,16 +160,15 @@ Tabla de atributos del sistema
         	\hline
         	Tipo & Primario y escencial\\
         	\hline
-        	Descripción & El jugador recibe por pantalla palabras que debe usar para crear una historia. El sistema recibe el feedback de los demas jugador y según lo que puntue este avanza o no.\\
+        	Descripción & El jugador recibe por pantalla palabras que debe usar para crear una historia. El sistema recibe el feedback de los demas jugador y según lo que puntue este, avanza o no.\\
         	\hline
         	Referencias Cruzadas & R1.4 ,R1.5 ,R1.6\\
         	\hline
         \end{tabular}
     \caption{Primer caso de uso}
+    \label{Caso_de_uso_1}
     \end{center}
 \end{table}
-
-\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
 
 \begin{longtable}[H]{| m{8cm} | m{8cm} |}
 \hline 
@@ -209,6 +209,7 @@ Tabla de atributos del sistema
         	\hline
         \end{tabular}
     \caption{Segundo caso de uso}
+    \label{Caso_de_uso_2}
     \end{center}
 \end{table}
 
@@ -251,6 +252,7 @@ Tabla de atributos del sistema
         	\hline
         \end{tabular}
     \caption{Tercer caso de uso}
+    \label{Caso_de_uso_3}
     \end{center}
 \end{table}
 
@@ -287,6 +289,7 @@ Tabla de atributos del sistema
         	\hline
         \end{tabular}
     \caption{Cuarto caso de uso}
+    \label{Caso_de_uso_4}
     \end{center}
 \end{table}
 
@@ -319,6 +322,7 @@ Tabla de atributos del sistema
         	\hline
         \end{tabular}
     \caption{Quinto caso de uso}
+    \label{Caso_de_uso_5}
     \end{center}
 \end{table}
 
@@ -355,6 +359,7 @@ Tabla de atributos del sistema
         	\hline
         \end{tabular}
     \caption{Sexto caso de uso}
+    \label{Caso_de_uso_6}
     \end{center}
 \end{table}
 
@@ -370,32 +375,56 @@ Tabla de atributos del sistema
 \hline
 \caption{Descripción de procesos caso de uso N°6}
 \end{longtable}
-
+\newpage
 \subsubsection{Diagrama de Caso de Uso}
+Esta sección es para representar de manera gráfica como interactuan los autores con el sistema en los distintos casos de uso, para asi tener una visión clara de como se lleva a cabo el proceso para realizar las acciones especificadas en los casos de uso que representan.\\
+
 \begin{figure}[H]
-   \includegraphics[scale=0.5]{imgs/DiagramaCasoUso1.png}
-   \includegraphics[scale=0.5]{imgs/DiagramaCasoUso2.png}
+	\centering
+	Los siguientes diagramas hacen referencia a los casos de uso 1 y 2 respectivamente\\(Tablas \ref{Caso_de_uso_1} y \ref{Caso_de_uso_2})
+	\subfloat[Diagrama N°1]
+	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso1.png}}
+	\subfloat[Diagrama N°2]
+	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso2.png}}
+ 	\caption{Digramas de casos de uso 1 y 2}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	Los siguientes diagramas hacen referencia a los casos de uso 3 y 4 respectivamente\\(Tablas \ref{Caso_de_uso_3} y \ref{Caso_de_uso_4})
+	\subfloat[Diagrama N°3]
+	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso3.png}}
+	\subfloat[Diagrama N°4]
+	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso4.png}}
+ 	\caption{Digramas de casos de uso 3 y 4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	Los siguientes diagramas hacen referencia a los casos de uso 5 y 6 respectivamente\\(Tablas \ref{Caso_de_uso_5} y \ref{Caso_de_uso_6})
+	\subfloat[Diagrama N°5]
+	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso5.png}}
+	\subfloat[Diagrama N°6]
+	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso6.png}}
+ 	\caption{Digramas de casos de uso 5 y 6}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-   \includegraphics[scale=0.5]{imgs/DiagramaCasoUso3.png}
-   \includegraphics[scale=0.5]{imgs/DiagramaCasoUso4.png}
-\end{figure}
-
-\begin{figure}[H]
-   \includegraphics[scale=0.4]{imgs/DiagramaCasoUso5.png}
-   \includegraphics[scale=0.5]{imgs/DiagramaCasoUso6.png}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-   \includegraphics[scale=0.9]{imgs/DCUs.jpeg}
+	Este diagrama muestra como serian todos los diagramas vistos anteriormente en un formato generalizado y en convivencia con todos los demás y como interactúan entre si.\\
+	\bigskip\bigskip
+   \includegraphics[scale=0.7]{imgs/DCUs.jpeg}
    \begin{center}
-   Diagrama general de casos de uso
+   \caption{Diagrama general de casos de uso}
    \end{center}
 \end{figure}
+
 \subsubsection{Contrato}
+Los contratos describen que es lo que se espera de una operación, enfatizando más en el análisis que en el diseño, es decir, responde principalmente al "¿Que debe hacer el sistema?". Para esto, es común utilizar pre y postcondiciones que giran en torno a los cambios de estado.
+Estos contratos son, en resumidas cuentas, una forma de presentar funciones o acciones concretas y un tanto especificas de lo que hace nuestro software.
+
+A continuación presentamos algunos de ellos.
+
 \begin{table}[H]
     \begin{center}
         \begin{tabular}{| m{15cm} |}       
@@ -416,9 +445,9 @@ Tabla de atributos del sistema
         	\hline
         	\textbf{Salida:} \\
         	\hline
-        	\textbf{Precondiciones:} La aplicación se pueda iniciar con ningún tipo de error\\
+        	\textbf{Precondiciones:} La aplicación se inicia con ningún tipo de error\\
         	\hline
-        	\textbf{Poscondiciones:} Se entrega acceso a el uso de la aplicación\\
+        	\textbf{Poscondiciones:} Se entrega acceso a el uso de la aplicación luego de verificar y autentificar los datos. Referencia a tabla \ref{Caso_de_uso_2}\\
         	\hline
         \end{tabular}
     \end{center}
@@ -565,11 +594,14 @@ Tabla de atributos del sistema
 \end{table}
 
 \subsubsection{Modelo Conceptual}
+El modelo conceptual que se presenta a continuacion muestra las relaciones que hay entre los diversos organismos, clases y conceptos dentro del software. Presenta como es el flujo entre cada uno de los miembros, es decir, que relacion tiene cada uno de los conceptos. La forma escrita de representarlo seria:
+El mapa de juego(lo que vendria siendo el tablero), contiene imagenes 360° y a su ves requiere poder usar el fire base para poder usar la base de datos, quien a su vez almacena palabras, jugadores y una tabla de puntajes.
 \begin{figure}[H]
 \centering
    \includegraphics[scale=0.9]{imgs/ModeloConceptual.jpeg}
 \end{figure}
 \subsubsection{Diagrama de Secuencia o Colaboración}
+Los función y proposito de los siguientes diagramas de secuencia o colaboración sirven para ejemplificar de manera grafica y como apoyo visual la comunicación entre los autores y el sistema de cada caso de uso.
 \begin{figure}[H]
    \includegraphics[scale=0.6]{imgs/DS_1.jpeg}
    \includegraphics[scale=0.6]{imgs/DS_2.jpeg}
