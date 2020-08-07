@@ -99,22 +99,131 @@ Alex Molina & José Francisco Riffo\\
 
 \newpage
 \section{Diseño}
-
 \subsection{Derivación del Modelo de Software}
 \subsubsection{Modelo de software inicial}
 Tomando como base el modelo de dominio, el modelo de diseño inicial modifica mayormente el orden de las clases para definir de forma más lineal su funcionamiento, sin perder la función cíclica que la aplicación ya contiene.
 La aplicación comienza con la identificación del usuario que además entrega una forma de reconocerse ante la base de datos. Luego de ingresar el jugador debe seleccionar una de las salas encontradas en la clase Room, donde además funciona como una forma de esperar a otros posibles jugadores. Al entrar al juego se mantiene el orden cíclico del modelo de dominio donde se puede ver la imagen en 360 y las palabras entregadas para luego crear la historia. Finalmente se entrega una valoración para los otros jugadores de sus historias que culmina con la presentación del ganador de la ronda, es decir, el jugador con la mejor valoración, para lo cual se pase a otra ronda.
+\begin{figure}[H]
+	\includegraphics[width=16cm, height=20cm]{imgs/ModeloSoftwareInicial.jpg}
+	\caption{Modelo de software inicial}
+\end{figure}
 
-\includegraphics[width=16cm, height=20cm]{imgs/ModeloSoftwareInicial.jpg}
 \subsubsection{Diagramas de Clases}
-\subsubsection{Diagramas de Interacción}
-\subsubsection{Diagramas de Estados}
+A continuación se presenta el diagrama de clases utilisado en el desarrollo de nuestra aplicación, con el proposito de poder estudiar y analizar su estructura, funciones, atributos y composicion de manera mas gráfica y sencilla.
 
+\begin{figure}[H]
+	\includegraphics[width=16cm, height=9cm]{imgs/uml_isw.png}
+	\caption{Diagrama de clases de diseño (UML)}
+\end{figure}
+\newpage
+\subsubsection{Diagramas de Interacción}
+Los diagramas de interaccion que se presentan a continuación grafican el recorrido de accion de los contratos presentados anteriormente en las tablas \ref{Contrato1}, \ref{Contrato2}, \ref{Contrato3}, \ref{Contrato4}, \ref{Contrato5} y \ref{Contrato6}.
+\bigskip
+\begin{enumerate}[1.]
+	\item \textbf{Cargar Imagenes:}
+El juego carga la imágenes una vez dentro de la partida, para así optimizar lo mejor posible el funcionamiento de la app, es por eso que, luego de ingresar a una partida en “RoomActivity”, el juego carga las imagenes en “ConquestGameActivity”.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=1]{imgs/Cargar Imagenes.jpeg}
+		\caption{Diegrama de interacción: Cargar Imagenes}
+	\end{figure}
+
+	\item \textbf{Inicio de juego:}
+El inicio de juego y todas sus verificaciones para el correcto funcionamiento ocurren dentro de la clase “MainActivity”, en esta clase, cuya función y tal como su nombre lo indica, hace de sala principal para redireccionar a las distintas instancias y demás clases.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=1]{imgs/Inicio de juego.jpeg}
+		\caption{Diegrama de interacción: Inicio de juego}
+	\end{figure}
+
+	\item \textbf{Inicio de Sesión:}
+El inicio de sesión occure de dos formas dependiendo si la aplicación reconoce un usuario ingresado anteriormente. Si se entra por primera vez, es decir, no hay recolección de una sesión iniciada el usuario pasa a la clase de identificación donde debe ingresar sus datos o su cuenta de google para pasar a la clase “MainActivity”. En el caso de que ya se encuentre un usuario se pasa directamente a “MainActivity”.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=1]{imgs/Inicio de Sesión.jpeg}
+		\caption{Diegrama de interacción: Inicio de Sesión}
+	\end{figure}
+
+	\item \textbf{Mostrar Palabras:}
+Luego de que todos los usuarios se encuentren en la sala, se da inicio a la partida, donde el primer paso es mostrarles las palabras que deben utilizar para crear la historia, esto se hace por medio de la clase “ConquestGameActivity” presentando el pool de palabras a los usuarios.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=1]{imgs/Mostrar Palabras.jpeg}
+		\caption{Diegrama de interacción: Mostrar Palabras}
+	\end{figure}
+
+	\item \textbf{Presentacion de puntaje:}
+Luego de ingresar y ver las historias entregadas por todos los usuarios se pasa a la clase “RatingActivity”, donde todos ponen una nota a las historias creadas. Luego de que la aplicación se asegure de que todos los votos han sido ingresados como feedback, se vuelve a la clase de “ConquestGameActvity” donde se da inicio a la siguiente partida.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{imgs/Presentacion de puntaje.jpeg}
+		\caption{Diegrama de interacción: Presentacion de puntaje}
+	\end{figure}
+
+	\item \textbf{Ver Imagen 360°:}
+Una vez dentro de la partida la imagen del punto de conquista siempre estará visible para el jugador, y para mostrarla el juego debe acceder a la base de datos desde la clase”PanoramaImageActivity”, donde busca la imagen y la muestra al usuario.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=1]{imgs/Ver Imagen 360.jpeg}
+		\caption{Diegrama de interacción: Ver Imagen 360°}
+	\end{figure}
+\end{enumerate}
+\subsubsection{Diagramas de Estados}
+Los diagramas de estado que se presentan en esta subseccion muestran el proceso de estados por los que pasa el programa segun sea el caso de uso en funcionamiento, mismos que se presentan en las tablas \ref{Contrato1}, \ref{Contrato2}, \ref{Contrato3}, \ref{Contrato4}, \ref{Contrato5} y \ref{Contrato6}.
+\bigskip
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{imgs/DiagramaEstado1.png}
+	\caption{Diegrama de estado: Jugar un turno}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{imgs/DiagramaEstado2.png}
+	\caption{Diegrama de estado: Iniciar sesión}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{imgs/DiagramaEstado3.png}
+	\caption{Diegrama de estado: Gnerar lista de palabras}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{imgs/DiagramaEstado4.png}
+	\caption{Diegrama de estado: Mostrar Imagen 360°}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{imgs/DiagramaEstado5.png}
+	\caption{Diegrama de estado: Mostrar tabla de puntaje}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{imgs/DiagramaEstado6.png}
+	\caption{Diegrama de estado: Puntuar jugador}
+\end{figure}
 \subsection{Refinamientos}
 \subsubsection{Lugar de Refinamiento}
+A pesar de no haberle dedicado mucho tiempo a esta sección en particular, nos hemos ido dando cuenta de ciertos puntos que requieren nuestra atención, por ejemplo, mejorar el diseño de la interfaz y la comunicación de esta con el usuario, integrar mas opciones que permitan al usuario personalizar la aplicación (Cambiar idioma, vincluar con diversas redes sociales, etc.), entre algunas de las opciones que hemos barajado, tambien estamos analizando la posibilidad de incluir un mejor sistema de jugabilidad, dando pie con esto ultimo a la opcion de abarcar aun a mas público, generando para esto distintos niveles de dificultad para hacer la experiencia de juego mas entretenida he interesante.
 \subsubsection{Para cada Lugar}
 \paragraph{Refinamientos considerados}
+Los refinamientos considerados fueron obtenidos mediante el desarrollo de la idea general y su proposito, mas no gracias a un proceso de iteración donde estudiemos mejoras al rendimiento del software.
+
+Los refinamientos son los siguientes:
+\begin{enumerate}[1.]
+	\item \textbf{Cambiar Idioma:} Tenemos la idea de añadir una opcion que permita al usuario cambiar el idioma del juego, esto nos daria a su vez la opción de promocionar el juego en distintos paises para permitir que nuestra cultura, y región sea conocida a traves del juego, sin necesidad de hablar español.
+	\item \textbf{Vincular con redes sociales:} Esta idea surge de la necesidad de poder llegar a una mayor cantidad de público.
+	\item \textbf{Generar niveles de dificultad:} Con esta modificación el juego ya no solo seria mas variado, si no que tambien lo haria menos reiterativo (Mucho menos de lo que ya es), ademas le da la posibilidad a la app de adaptarse al nivel de lenguaje del usuario que usara la app.
+\end{enumerate}
 \paragraph{Selección y descripción de una opción}
+\textbf{Generar niveles de dificultad:} Este refinamiento se planea aplicar por medio de programar en el sistema una opcion que, al momento de crear una sala de juego, se presentepara moderar y adecuar el nivel de dificultad que el usuario quiera, presentando con la opción, las palabras que se incluiran y la cantidad de estas que se presentaran para la realisación de la historia. Junto con esto se añaden tambien, mas palabras a la base de datos y una clasificación para reconocer que dificultad posee la palabra en cuestion, asi, a la hora de generar una lista de palaras, estas se busquen tomando en concideración la caracteristica antes señalada.
 
 %%%%%%%%%%%%%% IMPLEMENTACION %%%%%%%%%%
 \newpage

@@ -260,7 +260,7 @@ En las siguienetes subsecsiones identificaremos y analizaremos algunos de los ca
 \hline 
 \textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
 \hline 
-1.-Este caso de uso comienza cuando el ususario inicia un turno de juego & 2.-El software accede a la base de datos a traves del firebase\\
+1.-Este caso de uso comienza cuando el ususario Interactua con la imagen 360° & 2.-El software accede a la base de datos a traves del firebase\\
 \hline
 & 3.-Se buscan y seleccionan palabras al azar\\
 \hline
@@ -450,6 +450,8 @@ A continuación presentamos algunos de ellos.
         	\textbf{Poscondiciones:} Se entrega acceso a el uso de la aplicación luego de verificar y autentificar los datos. Referencia a tabla \ref{Caso_de_uso_2}\\
         	\hline
         \end{tabular}
+	\caption{Contrato: inicio de juego}
+    \label{Contrato1}
     \end{center}
 \end{table}
 
@@ -478,6 +480,8 @@ A continuación presentamos algunos de ellos.
         	\textbf{Poscondiciones:} Se obtuvo los datos del usuario y se avisa de su ingreso a la aplicación\\
         	\hline
         \end{tabular}
+    \caption{Contrato: inicio de sesión}
+    \label{Contrato2}
     \end{center}
 \end{table}
 
@@ -506,6 +510,8 @@ A continuación presentamos algunos de ellos.
         	\textbf{Poscondiciones:} Se generan las palabras y se entregan a los usuarios\\
         	\hline
         \end{tabular}
+    \caption{Contrato: Lista de palabras}
+    \label{Contrato3}
     \end{center}
 \end{table}
 
@@ -513,7 +519,7 @@ A continuación presentamos algunos de ellos.
     \begin{center}
         \begin{tabular}{| m{15cm} |}       
         	\hline 
-        	\textbf{Nombre:} Pantalla imagen 360\\
+        	\textbf{Nombre:} Pantalla imagen 360°\\
         	\hline
         	\textbf{Responsabilidades:} Se ve la imagen en 360 en cada partida \\
         	\hline
@@ -534,6 +540,8 @@ A continuación presentamos algunos de ellos.
         	\textbf{Poscondiciones:} Se entrefa la imagen con la opción de finalizar su visualización\\
         	\hline
         \end{tabular}
+    \caption{Contrato: Pantalla imagen 360°}
+    \label{Contrato4}
     \end{center}
 \end{table}
 
@@ -562,6 +570,8 @@ A continuación presentamos algunos de ellos.
         	\textbf{Poscondiciones:} Los puntajes se analizan y se entregan a los usuarios\\
         	\hline
         \end{tabular}
+    \caption{Contrato: Presentación de puntajes}
+    \label{Contrato5}
     \end{center}
 \end{table}
 
@@ -590,6 +600,8 @@ A continuación presentamos algunos de ellos.
         	\textbf{Poscondiciones:} La imagen esta lista para ser presentada al momento de que los usuarios ingresen\\
         	\hline
         \end{tabular}
+    \caption{Contrato: Cargar imagen 360°}
+    \label{Contrato6}
     \end{center}
 \end{table}
 
@@ -608,59 +620,80 @@ Los función y proposito de los siguientes diagramas de secuencia o colaboració
 	\centering
 	Los siguientes diagramas hacen referencia a los casos de uso 1 y 2 respectivamente\\(Tablas \ref{Caso_de_uso_1} y \ref{Caso_de_uso_2})
 	\subfloat[Diagrama de secuencia N°1]
-	{\includegraphics[scale=0.6]{imgs/DS_1.jpeg}}
+	{\includegraphics[width=8cm, height=6cm]{imgs/DS_1.jpeg}}
 	\subfloat[Diagrama de secuencia N°2]
-	{\includegraphics[scale=0.6]{imgs/DS_2.jpeg}}
+	{\includegraphics[width=8cm, height=6cm]{imgs/DS_2.jpeg}}
  	\caption{Digramas de secuencia 1 y 2}
 \end{figure}
 
 \begin{figure}[H]
-   \includegraphics[scale=0.6]{imgs/DS_3.jpeg}
-   \includegraphics[scale=0.6]{imgs/DS_4.jpeg}
+	\centering
+	Los siguientes diagramas hacen referencia a los casos de uso 3 y 4 respectivamente\\(Tablas \ref{Caso_de_uso_3} y \ref{Caso_de_uso_4})
+	\subfloat[Diagrama de secuencia N°3]
+	{\includegraphics[width=8cm, height=6cm]{imgs/DS_3.jpeg}}
+	\subfloat[Diagrama de secuencia N°4]
+	{\includegraphics[width=8cm, height=6cm]{imgs/DS_3.jpeg}}
+ 	\caption{Digramas de secuencia 3 y 4}
 \end{figure}
 
 \begin{figure}[H]
-   \includegraphics[scale=0.6]{imgs/DS_5.jpeg}
-   \includegraphics[scale=0.6]{imgs/DS_6.jpeg}
+	\centering
+	Los siguientes diagramas hacen referencia a los casos de uso 5 y 6 respectivamente\\(Tablas \ref{Caso_de_uso_5} y \ref{Caso_de_uso_6})
+	\subfloat[Diagrama de secuencia N°5]
+	{\includegraphics[width=8cm, height=6cm]{imgs/DS_5.jpeg}}
+	\subfloat[Diagrama de secuencia N°6]
+	{\includegraphics[width=8cm, height=6cm]{imgs/DS_6.jpeg}}
+ 	\caption{Digramas de secuencia 5 y 6}
 \end{figure}
 
 \subsubsection{Priorización}
-1. Jugar una partida de Conquista Turística 360° \textbf{Esencial}\\
-2. Iniciar sesión \textbf{Esencial}\\
-3. Generar lista de palabras \textbf{Esencial}\\
-4. Mostrar imagen 360 \textbf{Esencial}\\
-5. Mostrar tabla de puntajes \textbf{Importante}\\
-6. Cargar imagen 360° \textbf{Esencial}\\
+Para tener claridad de los que nos resulta mas apremiante o necesario para el software necesitamos tener muy presente el motivo de su creación, que queremos lograr con su desarrollo. Es por esto que debemos evaluar las funciones de nuestro juego y hacernos la gran pregunta "Si elimino esto, ¿Seguira funcionando la aplicación", si la respuesta es \textbf{NO}, entonces nos encontramos con una parte \textbf{Escencial} para nuestro software, ahora, en caso de que la respuesta sea si,  "¿Sigue siendo jugable? o ¿Entiendo como proseguir si lo borro?", en caso de que la respuesta sea una negativa entonces tambien cuenta como un atributo \textbf{Escencial} para el desarrollo.
+Ahora bien, todos los elementos esteticos cuya función es simplemente la de hacer mas agradable y comprensible todo el resto de funciones, forman parte de atributos o funciones \textbf{Importantes}.
+
+Los siguientes son los proncipales funciones y caracteristicas con las que nuestro software debe contar, utilizando el metodo de priorizacion antes mencionado.
+
+\begin{enumerate}[1.]
+	\item Jugar una partida de Conquista Turística 360° \textbf{Esencial}.
+	\item Iniciar sesión \textbf{Esencial}
+	\item Generar lista de palabras \textbf{Esencial}
+	\item Mostrar imagen 360 \textbf{Esencial}
+	\item Mostrar tabla de puntajes \textbf{Importante}
+	\item Cargar imagen 360° \textbf{Esencial}
+\end{enumerate}
+
 \subsection{Modelo de Dominio}
+El modelo de dominio presentado cumple con la presentacion de manera conceptual de todas las clases dentro de nuestro sistema, con el fin de que se comprenda la relacion ente los objetos del mundo real que se tienen y como estos afectan a nuestro desarrolllo y visión de programa, o, en otras palabras, como tomamos importancia de hacer que nuestra software sea lógico y cumpla a su vez con un modelo de programación facil de comprender, aproximandose lo mas posible a lo que significa programación orientada a objetos.
 \subsubsection{Entidades Reconocidas}
+Dentro de este software solo pudimos identificar a la base de datos como una entidad, tomando en consideración lo que entendemos por entidad.
 Base de Datos: Sistema de almacenamiento de recursos necesarios para el funcionamiento de la aplicación.
 \subsubsection{Modelo de Dominio}
 \begin{figure}[H]
 \centering
-   \includegraphics[scale=0.5]{imgs/ModeloDominio.png}
+   \includegraphics[width=14cm, height=6cm]{imgs/ModeloDominio.png}
    \begin{center}
    \caption{Diagrama de dominio: UML}
    \end{center}
 \end{figure}
 \subsubsection{Matriz de Rastreabilidad}
+
 \begin{table}[H]
-    \begin{center}
-        \begin{tabular}{| c | c | c | c | c | c | c |}       
-        	\hline 
-        	 & History & Rating & Player & WordList & PanoramaImage & ConquestGame \\
-        	\hline
-        	1 & X & X & X & X & X & X \\
-        	\hline
-        	2 &  & & X &  &  &  \\
-        	\hline
-        	3 &  &  &  & X &  &  \\
-        	\hline
-        	4 &  &  &  &  & X &  \\
-        	\hline
-        	5 &  & X &  &  &  &  \\
-        	\hline
-        	6 &  &  &  &  & X &  \\
-        	\hline
-        \end{tabular}
-    \end{center}
+    \centering
+	\begin{tabular}{| c | c | c | c | c | c | c |}       
+		\hline 
+		& History & Rating & Player & WordList & PanoramaImage & ConquestGame\\
+		\hline
+		1 & X & X & X & X & X & X \\
+		\hline
+		2 &  & & X &  &  &  \\
+		\hline
+		3 &  &  &  & X &  &  \\
+		\hline
+		4 &  &  &  &  & X &  \\
+		\hline
+		5 &  & X &  &  &  &  \\
+		\hline
+		6 &  &  &  &  & X &  \\
+		\hline
+	\end{tabular}
+	\caption{Matriz de rastreabilidad}
 \end{table}
