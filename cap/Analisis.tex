@@ -141,7 +141,7 @@ Tabla de atributos del sistema
 		\item Gmail : Herramienta principal para identificar al usuario por medio de correo electrónico.
 	\end{enumerate} 
 \end{enumerate}
-\newpage
+
 \subsection{Casos de Uso}
 En las siguienetes subsecsiones identificaremos y analizaremos algunos de los casos de uso detectadosy como estos tienen relacion con los autore, requisitos, y funciones del sistema vistos con anterioridad en este informe.
 \subsubsection{Caso de Uso Esencial}
@@ -174,7 +174,7 @@ En las siguienetes subsecsiones identificaremos y analizaremos algunos de los ca
 \hline 
 \textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
 \hline 
-1.-Este caso de uso comienza cuando el ususario inicia un turno de juego & 2.-La GUI le presenta al ususario un listado de palabras\\
+1.-El jugador inicia un turno de juego & 2.-La GUI le presenta al ususario un listado de palabras\\
 \hline
 3.-El usuario crea una historia usando las palabras presentadas & \\
 \hline
@@ -217,7 +217,7 @@ En las siguienetes subsecsiones identificaremos y analizaremos algunos de los ca
 \hline 
 \textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
 \hline 
-1.-Este caso de uso comienza cuando el usuario abre la aplicación & 2.-La GUI le presenta al ususario un formulario de usuario y contraseña para ser rellenado\\
+1.-El jugador abre la aplicación & 2.-La GUI le presenta al ususario un formulario de usuario y contraseña para ser rellenado\\
 \hline
 3.-El usuario rellena los campos señalados & 4.-El sistema verifica la información a traves del firebase\\
 \hline
@@ -246,7 +246,7 @@ En las siguienetes subsecsiones identificaremos y analizaremos algunos de los ca
         	\hline
         	Tipo & Primario y escencial\\
         	\hline
-        	Descripción & El jugador toca la imagen 360° y la aplicacion accede a la base de datos a traves del FireBase, busca 4 palabras aleatorias y se las muestra al jugador por pantalla\\
+        	Descripción & El jugador toca la imagen 360° y la aplicación accede a la base de datos a través del FireBase, busca 4 palabras aleatorias y se las muestra al jugador por pantalla\\
         	\hline
         	Referencias Cruzadas & R1.3 ,R1.5\\
         	\hline
@@ -260,7 +260,7 @@ En las siguienetes subsecsiones identificaremos y analizaremos algunos de los ca
 \hline 
 \textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
 \hline 
-1.-Este caso de uso comienza cuando el ususario Interactua con la imagen 360° & 2.-El software accede a la base de datos a traves del firebase\\
+1.-El jugador interactua con la imagen 360° & 2.-El software accede a la base de datos a traves del firebase\\
 \hline
 & 3.-Se buscan y seleccionan palabras al azar\\
 \hline
@@ -297,7 +297,9 @@ En las siguienetes subsecsiones identificaremos y analizaremos algunos de los ca
 \hline 
 \textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
 \hline 
-1.-Este caso de uso comienza cuando el jugador conquista una pocision y avanza a la siguiente & 2.-La GUI le presenta al ususario la nueva imagen 360°\\
+1.-El jugador conquista una posición & \\
+\hline
+2.-El jugador avanza al siguiente punto en el mapa & 3.-La GUI le presenta al ususario la nueva imagen 360°\\
 \hline 
 \caption{Descripción de procesos caso de uso N°4}
 \end{longtable}
@@ -330,7 +332,7 @@ En las siguienetes subsecsiones identificaremos y analizaremos algunos de los ca
 \hline 
 \textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
 \hline 
-1.-Este caso de uso comienza cuando el jugador accede a la tabla de puntajes & 2.-El sistema recibe la orden he ingresa a la base de datos\\
+1.-El jugador accede a la tabla de puntajes & 2.-El sistema recibe la orden he ingresa a la base de datos\\
 \hline
 & 3.-El sistema adquiere los puntajes y los ordena de mayor a menor\\
 \hline
@@ -367,7 +369,7 @@ En las siguienetes subsecsiones identificaremos y analizaremos algunos de los ca
 \hline 
 \textbf{Acción de los actores} & \textbf{Respuesta del sistema}\\
 \hline 
-1.-Este caso de uso comienza cuando el cuenta su historia & 2.-La GUI le muestra a los demás jugadores un sistema de calificación\\
+1.-El jugador cuenta su historia & 2.-La GUI le muestra a los demás jugadores un sistema de calificación\\
 \hline
 3.-Los demas usuarios en la partida votan la historia narrada & 4.-El sistema almacena y analiza las votaciones\\
 \hline
@@ -381,32 +383,37 @@ Esta sección es para representar de manera gráfica como interactuan los autore
 
 \begin{figure}[H]
 	\centering
-	Los siguientes diagramas hacen referencia a los casos de uso 1 y 2 respectivamente\\(Tablas \ref{Caso_de_uso_1} y \ref{Caso_de_uso_2})
-	\subfloat[Diagrama N°1]
-	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso1.png}}
-	\subfloat[Diagrama N°2]
-	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso2.png}}
- 	\caption{Digramas de casos de uso 1 y 2}
+	{\includegraphics[width=12cm, height=6cm]{imgs/DiagramaCasoUso1.png}}
+	\caption{Digrama de casos de uso 1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	Los siguientes diagramas hacen referencia a los casos de uso 3 y 4 respectivamente\\(Tablas \ref{Caso_de_uso_3} y \ref{Caso_de_uso_4})
-	\subfloat[Diagrama N°3]
-	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso3.png}}
-	\subfloat[Diagrama N°4]
-	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso4.png}}
- 	\caption{Digramas de casos de uso 3 y 4}
+	{\includegraphics[width=12cm, height=6cm]{imgs/DiagramaCasoUso2.png}}
+ 	\caption{Digrama de casos de uso 2}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
-	Los siguientes diagramas hacen referencia a los casos de uso 5 y 6 respectivamente\\(Tablas \ref{Caso_de_uso_5} y \ref{Caso_de_uso_6})
-	\subfloat[Diagrama N°5]
-	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso5.png}}
-	\subfloat[Diagrama N°6]
-	{\includegraphics[width=8cm, height=4cm]{imgs/DiagramaCasoUso6.png}}
- 	\caption{Digramas de casos de uso 5 y 6}
+	{\includegraphics[width=12cm, height=6cm]{imgs/DiagramaCasoUso3.png}}
+	\caption{Digramas de casos de uso 3}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=12cm, height=6cm]{imgs/DiagramaCasoUso4.png}}
+ 	\caption{Digramas de casos de uso 4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=12cm, height=6cm]{imgs/DiagramaCasoUso5.png}}
+ 	\caption{Digramas de casos de uso 5}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	{\includegraphics[width=12cm, height=6cm]{imgs/DiagramaCasoUso6.png}}
+ 	\caption{Digramas de casos de uso 6}
 \end{figure}
 
 \begin{figure}[H]

@@ -102,7 +102,7 @@ Alex Molina & José Francisco Riffo\\
 \subsection{Derivación del Modelo de Software}
 \subsubsection{Modelo de software inicial}
 Tomando como base el modelo de dominio, el modelo de diseño inicial modifica mayormente el orden de las clases para definir de forma más lineal su funcionamiento, sin perder la función cíclica que la aplicación ya contiene.
-La aplicación comienza con la identificación del usuario que además entrega una forma de reconocerse ante la base de datos. Luego de ingresar el jugador debe seleccionar una de las salas encontradas en la clase Room, donde además funciona como una forma de esperar a otros posibles jugadores. Al entrar al juego se mantiene el orden cíclico del modelo de dominio donde se puede ver la imagen en 360 y las palabras entregadas para luego crear la historia. Finalmente se entrega una valoración para los otros jugadores de sus historias que culmina con la presentación del ganador de la ronda, es decir, el jugador con la mejor valoración, para lo cual se pase a otra ronda.
+La aplicación comienza con la identificación del usuario que además entrega una forma de reconocerse ante la base de datos. Luego de ingresar el jugador debe seleccionar una de las salas encontradas en la clase Room, donde además funciona como una forma de esperar a otros posibles jugadores. Al entrar al juego se mantiene el orden cíclico del modelo de dominio donde se puede ver la imagen en 360° y las palabras entregadas para luego crear la historia. Finalmente se entrega una valoración para los otros jugadores de sus historias que culmina con la presentación del ganador de la ronda, es decir, el jugador con la mejor valoración, para lo cual se pase a otra ronda.
 \begin{figure}[H]
 	\includegraphics[width=16cm, height=20cm]{imgs/ModeloSoftwareInicial.jpg}
 	\caption{Modelo de software inicial}
@@ -211,22 +211,23 @@ Los diagramas de estado que se presentan en esta subseccion muestran el proceso 
 \end{figure}
 \subsection{Refinamientos}
 \subsubsection{Lugar de Refinamiento}
-A pesar de no haberle dedicado mucho tiempo a esta sección en particular, nos hemos ido dando cuenta de ciertos puntos que requieren nuestra atención, por ejemplo, mejorar el diseño de la interfaz y la comunicación de esta con el usuario, integrar mas opciones que permitan al usuario personalizar la aplicación (Cambiar idioma, vincluar con diversas redes sociales, etc.), entre algunas de las opciones que hemos barajado, tambien estamos analizando la posibilidad de incluir un mejor sistema de jugabilidad, dando pie con esto ultimo a la opcion de abarcar aun a mas público, generando para esto distintos niveles de dificultad para hacer la experiencia de juego mas entretenida he interesante.
+A pesar de no haberle dedicado mucho tiempo a esta sección en particular, nos hemos ido dando cuenta de ciertos puntos que requieren nuestra atención, mejorar la manera en que dividimos las tareas entre las distintas clases y mejorar la estructuración del código, son dos puntos que creemos merecen y pueden mejorarse aún, esto a su vez permitiría que el programa funcione con mayor fluidez.
 \subsubsection{Para cada Lugar}
 \paragraph{Refinamientos considerados}
-Los refinamientos considerados fueron obtenidos mediante el desarrollo de la idea general y su proposito, mas no gracias a un proceso de iteración donde estudiemos mejoras al rendimiento del software.
+Los refinamientos considerados fueron obtenidos gracias a las previas experiencias en programación y los conocimientos obtenidos a lo largo de nuestros estudios, todo eso en conjunto con el análisis realizado al proyecto y los atributos que se planean respetar he implementar.
 
 Los refinamientos son los siguientes:
 \begin{enumerate}[1.]
-	\item \textbf{Cambiar Idioma:} Tenemos la idea de añadir una opcion que permita al usuario cambiar el idioma del juego, esto nos daria a su vez la opción de promocionar el juego en distintos paises para permitir que nuestra cultura, y región sea conocida a traves del juego, sin necesidad de hablar español.
-	\item \textbf{Vincular con redes sociales:} Esta idea surge de la necesidad de poder llegar a una mayor cantidad de público.
-	\item \textbf{Generar niveles de dificultad:} Con esta modificación el juego ya no solo seria mas variado, si no que tambien lo haria menos reiterativo (Mucho menos de lo que ya es), ademas le da la posibilidad a la app de adaptarse al nivel de lenguaje del usuario que usara la app.
+	\item \textbf{Mejorar la estructuración del código:} Se planea ordenar y comentar más especificamente las clases, atributos y funciones en el código, con el fin de hacer mas sencillo manipular el codigo en caso de realizarle modificaciones o mantenimiento.
+	
+	\item \textbf{Optimizar las clases:} La idea es que cada clase contenga solo lo que necesita poseer por si misma, pero tambien se debe alivianar la carga de cada clase, para esto se piensa en implementar mas clases, con el fin de hacer clases más específicas para cada cosa.
+	
 \end{enumerate}
 \paragraph{Selección y descripción de una opción}
-\textbf{Generar niveles de dificultad:} Este refinamiento se planea aplicar por medio de programar en el sistema una opcion que, al momento de crear una sala de juego, se presentepara moderar y adecuar el nivel de dificultad que el usuario quiera, presentando con la opción, las palabras que se incluiran y la cantidad de estas que se presentaran para la realisación de la historia. Junto con esto se añaden tambien, mas palabras a la base de datos y una clasificación para reconocer que dificultad posee la palabra en cuestion, asi, a la hora de generar una lista de palaras, estas se busquen tomando en concideración la caracteristica antes señalada.
+\textbf{Optimizar las clases:} La finalidad de esto, que fue explicada con aterioridad, sirve en gran ,medida para alivianar la carga de cada clase y hacer el código mas legible y menos pesado de entender.
 
 %%%%%%%%%%%%%% IMPLEMENTACION %%%%%%%%%%
-\newpage
+
 \input{cap/Implementacion.tex}
 
 %%%%%%%%%%%%%%%% ANEXOS %%%%%%%%%%%%%%%%5
